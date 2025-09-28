@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f9fc; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 30px auto; background: #ffffff; border-radius: 8px;
+                     padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+        h2 { color: #1565c0; }
+        p { color: #333; }
+        .footer { margin-top: 30px; font-size: 13px; color: #555; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Welcome, <span th:text="${name}">Customer</span>!</h2>
+    <p>We are excited to have you on board at <b>Phegon Bank</b>.</p>
+    <p>Start enjoying seamless deposits, withdrawals, transfers, and monthly statements.</p>
+    <p><b>Your financial journey starts here 🚀</b></p>
+    <div class="footer">
+        © 2026 Phegon Bank | Your Trusted Partner
+    </div>
+</div>
+</body>
+</html>

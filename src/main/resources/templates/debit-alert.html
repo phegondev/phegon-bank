@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Debit Alert</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f9fc; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 20px auto; background: #ffffff; border-radius: 8px;
+                     padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #c62828; }
+        .alert { background: #ffebee; padding: 15px; border-radius: 6px; margin: 15px 0; }
+        .footer { margin-top: 20px; font-size: 13px; color: #555; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Debit Alert</h2>
+    <p>Dear <b th:text="${name}">Customer</b>,</p>
+    <div class="alert">
+        <p>Your account has been debited with <b>$<span th:text="${amount}"></span></b></p>
+        <p>Account Number: <b th:text="${accountNumber}"></b></p>
+        <p>Date: <span th:text="${date}"></span></p>
+        <p>Available Balance: <b>$<span th:text="${balance}"></span></b></p>
+    </div>
+    <p>Thank you for banking with us.</p>
+    <div class="footer">
+        © 2026 Phegon Bank | Secure Online Banking
+    </div>
+</div>
+</body>
+</html>

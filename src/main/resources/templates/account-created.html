@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your New Bank Account Number✅</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7fb; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 30px auto; background: #ffffff; border-radius: 8px;
+                     padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #2e7d32; text-align: center; }
+        p { color: #333; line-height: 1.6; }
+        ul { list-style: none; padding: 0; }
+        li { background: #f1f1f1; margin: 5px 0; padding: 10px; border-radius: 5px; }
+        .footer { margin-top: 30px; font-size: 13px; color: #777; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hello, <span th:text="${name}"></span> 👋</h2>
+    <p>Your <b><span th:text="${accountType}"></span></b> account has been successfully created 🎉</p>
+
+    <p><b>Account Details:</b></p>
+    <ul>
+        <li>Account Number: <b th:text="${accountNumber}"></b></li>
+        <li>Account Type: <b th:text="${accountType}"></b></li>
+        <li>Currency: <b th:text="${currency}"></b></li>
+    </ul>
+
+    <p>You can now log in and start using your account immediately.</p>
+
+    <div class="footer">
+        © 2026 Phegon Bank | Secure Banking Made Simple
+    </div>
+</div>
+</body>
+</html>
