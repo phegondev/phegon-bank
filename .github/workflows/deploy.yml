@@ -1,1 +1,24 @@
+name: Deploy To EC2
 
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Ec2
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ec2-user
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          script: | 
+            cd /home/ec2-user/projects/phegon-bank
+            git pull
+            docker-compose up --build -d
