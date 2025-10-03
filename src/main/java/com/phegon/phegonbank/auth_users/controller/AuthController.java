@@ -6,7 +6,6 @@ import com.phegon.phegonbank.auth_users.dtos.RegistrationRequest;
 import com.phegon.phegonbank.auth_users.dtos.ResetPasswordRequest;
 import com.phegon.phegonbank.auth_users.services.AuthService;
 import com.phegon.phegonbank.res.Response;
-import com.phegon.phegonbank.role.entity.Role;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
