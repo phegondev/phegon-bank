@@ -1,0 +1,17 @@
+# Define the services (containers) for your application.
+services:
+  # The name of your service. You can change this to something more descriptive.
+  app:
+    # Use the `build` instruction to tell Docker Compose to build the image from the Dockerfile.
+    build:
+      context: .
+    # Map port 8090 on the host to port 8090 in the container.
+    ports:
+      - "8090:8090"
+    # Set the restart policy for the container. `unless-stopped` will restart the container
+    # unless it is explicitly stopped.
+    restart: unless-stopped
+    # Pass environment variables to the container from a file named .env.
+    # This is a good practice for managing multiple variables.
+    env_file:
+      - .env
